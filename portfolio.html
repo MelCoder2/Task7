@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Aguido L. Velez - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Prince Arvin Cabute - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -14,675 +11,347 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --bg-main: #fafafa;
-            --bg-card: #ffffff;
-            --text-primary: #18181b;
-            --text-secondary: #71717a;
-            --accent: #0ea5e9;
-            --border: #e4e4e7;
-            --hover: #f4f4f5;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
         body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--bg-main);
-            color: var(--text-primary);
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 20px;
         }
 
         /* Header Section */
         .header {
-            background: var(--bg-card);
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 2rem;
-            align-items: center;
-            animation: slideDown 0.6s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 20px;
-            background: var(--gradient-1);
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: #ddd;
         }
 
         .header-info h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.25rem;
-            color: var(--text-primary);
+            font-size: 32px;
+            margin-bottom: 5px;
         }
 
-        .header-info .pronouns {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-left: 0.5rem;
+        .header-info h2 {
+            font-size: 18px;
+            color: #666;
+            font-weight: normal;
+            margin-bottom: 10px;
         }
 
-        .header-info .title {
-            color: var(--primary);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .header-info .location {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .university-logo {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-3);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-align: center;
-            padding: 0.5rem;
-            line-height: 1.2;
+        .header-info p {
+            color: #888;
+            margin-bottom: 15px;
         }
 
         .social-links {
             display: flex;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
-        .social-btn {
-            padding: 0.625rem 1.25rem;
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            color: var(--text-secondary);
+        .social-links a {
             text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
+            color: #333;
+            background-color: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .social-links a:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Two Column Layout */
+        .content {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
+            gap: 20px;
         }
 
-        .social-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+        .left-column {
+            flex: 2;
         }
 
-        /* Bento Grid Layout */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+        .right-column {
+            flex: 1;
         }
 
-        .bento-item {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.6s ease backwards;
-        }
-
-        .bento-item:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            transform: translateY(-4px);
-        }
-
-        .bento-item:nth-child(1) { animation-delay: 0.1s; }
-        .bento-item:nth-child(2) { animation-delay: 0.2s; }
-        .bento-item:nth-child(3) { animation-delay: 0.3s; }
-        .bento-item:nth-child(4) { animation-delay: 0.4s; }
-        .bento-item:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .about {
-            grid-column: span 8;
-        }
-
-        .tech-stack {
-            grid-column: span 4;
-        }
-
-        .experience {
-            grid-column: span 8;
-        }
-
-        .hobbies {
-            grid-column: span 4;
-        }
-
-        .projects {
-            grid-column: span 12;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-1);
+        /* Section Styles */
+        .section {
+            background-color: white;
+            padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.25rem;
+            gap: 10px;
         }
 
-        .section-header h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
+        /* Experience Item */
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
         }
 
-        .about-text {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .experience-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .experience-date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .experience-company {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
 
         /* Tech Stack */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-tag {
+            background-color: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
         .tech-category {
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
 
         .tech-category:last-child {
             margin-bottom: 0;
         }
 
-        .tech-category h3 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .tech-category h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
         }
 
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        /* Project Item */
+        .project-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
 
-        .tech-tag {
-            padding: 0.5rem 1rem;
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-        }
-
-        .tech-tag:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        /* Experience */
-        .experience-item {
-            padding: 1.5rem;
-            background: var(--bg-main);
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
-        }
-
-        .experience-item:last-child {
+        .project-item:last-child {
+            border-bottom: none;
             margin-bottom: 0;
+            padding-bottom: 0;
         }
 
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 0.5rem;
+        .project-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
-        .experience-header h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-primary);
+        .project-description {
+            color: #666;
+            font-size: 14px;
         }
 
-        .experience-date {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        .experience-company {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Hobbies */
+        /* Hobby Item */
         .hobby-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
 
         .hobby-item:last-child {
             margin-bottom: 0;
         }
 
-        .hobby-item h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
+        .hobby-title {
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        .hobby-item p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            padding: 2rem;
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-1);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .project-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
-            transform: translateY(-4px);
-        }
-
-        .project-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .hobby-description {
+            color: #666;
+            font-size: 14px;
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .about {
-                grid-column: span 12;
-            }
-
-            .tech-stack {
-                grid-column: span 12;
-            }
-
-            .experience {
-                grid-column: span 12;
-            }
-
-            .hobbies {
-                grid-column: span 12;
-            }
-
+        @media (max-width: 768px) {
             .header {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 text-align: center;
             }
 
-            .profile-image,
-            .university-logo {
-                margin: 0 auto;
+            .content {
+                flex-direction: column;
             }
 
             .social-links {
                 justify-content: center;
             }
         }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .header {
-                padding: 2rem;
-            }
-
-            .header-info h1 {
-                font-size: 2rem;
-            }
-
-            .bento-item {
-                padding: 1.5rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-
-        /* Logout Button */
-        .logout-btn {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            z-index: 100;
-        }
-
-        .logout-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-        }
     </style>
 </head>
 <body>
-    <a href="login.html" class="logout-btn">← Back to Login</a>
-
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="profile-image">MA</div>
+        <!-- Header Section -->
+        <div class="header">
+            <img src="pfp.jpg" alt="Your Photo" class="profile-img">
             <div class="header-info">
-                <h1>Michael Aguido L. Velez <span class="pronouns">He/Him</span></h1>
-                <div class="title">Frontend Developer</div>
-                <div class="location">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    Davao City, Philippines
-                </div>
+                <h1>Your Name</h1>
+                <h2>Frontend Developer</h2>
+                <p>📍 Davao City, Philippines</p>
                 <div class="social-links">
-                    <a href="/cdn-cgi/l/email-protection#d2bfbbb1bab3b7bea4b7beb7a8e3e3e0e1e2e392b5bfb3bbbefcb1bdbf" class="social-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        Email
-                    </a>
-                    <a href="#" class="social-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                    <a href="#" class="social-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="#" class="social-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
-                        </svg>
-                        Instagram
-                    </a>
-                    <a href="#" class="social-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                        Facebook
-                    </a>
+                    <a href="mailto:your.email@gmail.com">📧 Email</a>
+                    <a href="#">💼 LinkedIn</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">👤 Facebook</a>
                 </div>
             </div>
-            <div class="university-logo">University of Mindanao</div>
-        </header>
+        </div>
 
-        <!-- Bento Grid -->
-        <div class="bento-grid">
-            <!-- About Me -->
-            <section class="bento-item about">
-                <div class="section-header">
-                    <div class="section-icon">👨‍💻</div>
-                    <h2>About Me</h2>
-                </div>
-                <p class="about-text">
-                    I'm a BS Information Technology graduate with 11 months of experience working as a front-end developer. I focus on building clean, responsive, and user-friendly interfaces using React and TypeScript, and I'm always looking for ways to improve through real project work and continuous learning.
-                </p>
-                <p class="about-text">
-                    I'm currently learning Next.js to broaden my skill set and strengthen my understanding of modern web development. This helps me build more efficient, scalable, and production-ready applications.
-                </p>
-            </section>
-
-            <!-- Tech Stack -->
-            <aside class="bento-item tech-stack">
-                <div class="section-header">
-                    <div class="section-icon">🛠️</div>
-                    <h2>Tech Stack</h2>
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- About Me Section -->
+                <div class="section">
+                    <h3>👤 About Me</h3>
+                    <p>I'm a 2nd year BS Information Technology student always looking for ways to improve through real project work and continuous learning.</p>
+                    <br>
+                    <p>I'm currently learning javascript and html to broaden my skill set and strengthen my understanding of modern web development. This helps me build more efficient, scalable, and production-ready applications.</p>
                 </div>
 
-                <div class="tech-category">
-                    <h3>Frontend</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Ant Design</span>
-                        <span class="tech-tag">ShadCN</span>
-                    </div>
-                </div>
-
-                <div class="tech-category">
-                    <h3>Backend</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Supabase</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Node.js</span>
-                    </div>
-                </div>
-
-                <div class="tech-category">
-                    <h3>Developer Tools</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">VS Code</span>
-                        <span class="tech-tag">Postman</span>
-                        <span class="tech-tag">Swagger</span>
-                        <span class="tech-tag">Discord</span>
-                        <span class="tech-tag">ClickUp</span>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- Experience -->
-            <section class="bento-item experience">
-                <div class="section-header">
-                    <div class="section-icon">💼</div>
-                    <h2>Experience</h2>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Junior Frontend Developer (Part-Time)</h3>
-                            <div class="experience-company">Aquila Softwares</div>
+                <!-- Experience Section -->
+                <div class="section">
+                    <h3>💼 Experience</h3>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title">N/A</div>
+                            <div class="experience-date">N/A</div>
                         </div>
-                        <div class="experience-date">June 2025 - Present</div>
+                        <div class="experience-company">N/A</div>
                     </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Junior Frontend Developer (Intern)</h3>
-                            <div class="experience-company">Aquila Softwares</div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title">N/A</div>
+                            <div class="experience-date">N/A</div>
                         </div>
-                        <div class="experience-date">March 2025 - June 2025</div>
+                        <div class="experience-company">N/A</div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Hobbies -->
-            <aside class="bento-item hobbies">
-                <div class="section-header">
-                    <div class="section-icon">🎯</div>
-                    <h2>Hobbies</h2>
-                </div>
-
-                <div class="hobby-item">
-                    <h3>Tech & Learning</h3>
-                    <p>I love keeping up with the latest tech. I spend a lot of my time watching videos about computers, phones, and deep dives into software development.</p>
-                </div>
-
-                <div class="hobby-item">
-                    <h3>Sports & Gaming</h3>
-                    <p>I love playing basketball and watching the NBA. When I'm not on the court, I enjoy playing video games to unwind.</p>
-                </div>
-            </aside>
-
-            <!-- Recent Projects -->
-            <section class="bento-item projects">
-                <div class="section-header">
-                    <div class="section-icon">🚀</div>
-                    <h2>Recent Projects</h2>
-                </div>
-
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>BetterMomsh</h3>
-                        <p>An e-commerce website: Curated baby products for moms and infants. Built with modern web technologies to provide a seamless shopping experience.</p>
+                <!-- Hobbies Section -->
+                <div class="section">
+                    <h3>🎮 Hobbies</h3>
+                    
+                    <div class="hobby-item">
+                        <div class="hobby-title">Tech & Learning</div>
+                        <div class="hobby-description">I love keeping up with the latest tech. I spend a lot of my time watching videos about computers, phones, and deep dives into software development.</div>
                     </div>
 
-                    <div class="project-card">
-                        <h3>Task Management System</h3>
-                        <p>A collaborative task management application built with React and TypeScript, featuring real-time updates and team collaboration features.</p>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Portfolio Website</h3>
-                        <p>A modern, responsive portfolio website showcasing my work and skills. Built with clean code and attention to user experience.</p>
+                    <div class="hobby-item">
+                        <div class="hobby-title">Sports & Gaming</div>
+                        <div class="hobby-description">I love playing basketball and watching the NBA. When I'm not on the court, I enjoy playing video games to unwind.</div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Tech Stack Section -->
+                <div class="section">
+                    <h3>🛠️ Tech Stack</h3>
+                    
+                    <div class="tech-category">
+                        <h4>Frontend</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>Backend</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>Developer Tools</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">GitHub</span>
+                            <span class="tech-tag">Discord</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Projects Section -->
+                <div class="section">
+                    <h3>📁 Recent Projects</h3>
+                    
+                    <div class="project-item">
+                        <div class="project-title">N/A</div>
+                        <div class="project-description">N/A</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">N/A</div>
+                        <div class="project-description">N/A.</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">N/A</div>
+                        <div class="project-description">N/A</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
