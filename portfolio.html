@@ -3,237 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task7.css">  
     <title>Prince Arvin Cabute - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            background-color: #ddd;
-        }
-
-        .header-info h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
-
-        .header-info h2 {
-            font-size: 18px;
-            color: #666;
-            font-weight: normal;
-            margin-bottom: 10px;
-        }
-
-        .header-info p {
-            color: #888;
-            margin-bottom: 15px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #333;
-            background-color: #f0f0f0;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .social-links a:hover {
-            background-color: #e0e0e0;
-        }
-
-
-        .content {
-            display: flex;
-            gap: 20px;
-        }
-
-        .left-column {
-            flex: 2;
-        }
-
-        .right-column {
-            flex: 1;
-        }
-
-        .section {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-
-        .section h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .experience-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-
-        .experience-title {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .experience-date {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .experience-company {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tech-tag {
-            background-color: #f0f0f0;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .tech-category {
-            margin-bottom: 20px;
-        }
-
-        .tech-category:last-child {
-            margin-bottom: 0;
-        }
-
-        .tech-category h4 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
     
-        .project-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .project-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .project-title {
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .project-description {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .hobby-item {
-            margin-bottom: 20px;
-        }
-
-        .hobby-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .hobby-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .hobby-description {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .content {
-                flex-direction: column;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-        }
-    </style>
-</head>
-<body>
+    </head>
+    <body>
     <div class="container">
        
         <div class="header">
             <img src="pfp.jpg" alt="Your Photo" class="profile-img">
             <div class="header-info">
-                <h1>Prince Arvin Mahinay Cabute</h1>
+                <h1>Prince Arvin M. Cabute</h1>
                 <h2>Frontend Developer</h2>
                 <p>📍 Davao City, Philippines</p>
                 <div class="social-links">
@@ -276,25 +56,19 @@
                     </div>
                 </div>
 
-                <!-- Hobbies Section -->
                 <div class="section">
                     <h3>🎮 Hobbies</h3>
-                    
-                    <div class="hobby-item">
-                        <div class="hobby-title">Tech & Learning</div>
-                        <div class="hobby-description">I love keeping up with the latest tech. I spend a lot of my time watching videos about computers, phones, and deep dives into software development.</div>
-                    </div>
 
                     <div class="hobby-item">
-                        <div class="hobby-title">Sports & Gaming</div>
-                        <div class="hobby-description">I love playing basketball and watching the NBA. When I'm not on the court, I enjoy playing video games to unwind.</div>
+                        <div class="hobby-title">Programming & Gaming</div>
+                        <div class="hobby-description">I’m a student passionate about web development and gaming. I’m learning various web technologies like HTML, CSS, JavaScript, and frameworks like React. My goal is to create responsive, user-friendly websites and web apps while exploring how web development can enhance gaming experiences. I’m always eager to learn and improve my skills with each project I work on.</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Column -->
+           
             <div class="right-column">
-                <!-- Tech Stack Section -->
+                
                 <div class="section">
                     <h3>🛠️ Tech Stack</h3>
                     
@@ -324,7 +98,6 @@
                     </div>
                 </div>
 
-                <!-- Recent Projects Section -->
                 <div class="section">
                     <h3>📁 Recent Projects</h3>
                     
@@ -348,3 +121,4 @@
     </div>
 </body>
 </html>
+
